@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book Record</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="icon" href="book.png"/>
+  <link href="istyle.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<div class="p-5 bg-dark text-white text-center">
+  <h1>Customized Book Record</h1>
+  <p><em>Enter values in the form below and make changes to the custom book record stored in LocalStorage</em></p>
+</div>
+<div class = "row mt-5">
+
+<form class="col-sm-4 container-sm mt-5 p-4 bg-light form-container" id="form">
+    <div class="col-sm-10">
+        <h2>Update Book Record:</h2>
+        <!-- Your form code -->
+        <div class="input-group mb-3 mt-5">
+            <span class="input-group-text bg-warning"><b>Title</b></span>
+            <input type="text" id="title" class="form-control" placeholder="Book's Title*" required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-warning"><b>Author</b></span>
+            <input type="text" id="fname" class="form-control" placeholder="First Name*" required>
+            <input type="text" id="lname" class="form-control" placeholder="Last Name*"required>
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-warning"><b>Price</b></span>
+            <input type="number" id="price" class="form-control" placeholder="Price*" required>
+        </div>
+        <div class="button-container">
+            <input type="submit" id="submitW" class="btn btn-dark ms-5" value="Submit" required>
+            <input type="button" id="updateW" class="btn btn-dark ms-2" disabled=true value="Update" required>
+        </div>
+        <span class="button-container" id="outMssg">
+            
+        </span>
+
+    </div>
+</form>
+<script src="input.js">
+</script>
+
+<div class="col container-sm-6 table-container mt-5 bg-light p-4">
+    <h2>Book Record:</h2>
+    <div class="col-sm-8 mt-5">
+      <table class="table table-hover tableh" id="tableb">
+        <thead class="table-dark">
+          <tr id="row00">
+            <th>Sr no.</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+   </div>
+</div>
+<div class="mt-50"></div>
+<div class="mt-5 p-4 bg-dark text-white text-center">
+  <p>Footer</p>
+</div>
+<script src="output.js"></script>
+
+</body>
+</html>
